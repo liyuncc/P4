@@ -135,6 +135,22 @@ function showDucks()
     //dumpDie($_POST);
     startSession();
     
+    
+    /*
+    if no feeds yet, create feed array
+    
+    if feeds exist, check to see if current feed is stored
+    
+    if the feed is stored, check the time to see if it's current (10 mins)
+    
+    if the time is current on the feed, use the cache
+
+    if the time is out of date, get new data, refresh the cache
+    
+    if no feed, create feed in cache, use website data
+    */
+    
+    
     if(!isset($_SESSION['Ducks'])){
        $_SESSION['Ducks'] = array(); 
     }
